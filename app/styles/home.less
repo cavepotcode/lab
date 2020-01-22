@@ -1,0 +1,157 @@
+@import "palette.less";
+
+.main-container {
+  background-image: none;
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+
+  red {
+    color: @red-button;
+  }
+
+  h1,
+  h3 {
+    font-family: "Montserrat";
+  }
+
+  h1 {
+    color: @red;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 3.25rem;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 1.18;
+    text-align: center;
+  }
+
+  p {
+    margin-top: 5%;
+    font-size: 1.5rem;
+  }
+
+  .first,
+  .second,
+  .third,
+  .fourth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .first {
+    display: flex;
+    height: 662px;
+    justify-content: center;
+    margin-bottom: 67px;
+    width: 100%;
+    
+    .image1 {
+      background: url("../assets/img/home/layer-1.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      flex: 452 0 auto;
+      height: 662px;
+      position: absolute;
+      width: 941px;
+    }
+
+    .image2 {
+      background: url("../assets/img/home/layer-2.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      flex: 617 0 auto;
+      height: 718px;
+      position: absolute;
+      width: 798px;
+    }
+
+    .image3 {
+      background: url("../assets/img/home/layer-person.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 605px;
+      margin-top: 112px;
+      position: absolute;
+      width: 330px;
+    }
+  }
+
+  .second {
+    height: 130px;
+    .image4 {
+      background: url("../assets/img/home/layer-cavepotlab.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: flex;
+      height: 130px;
+      justify-content: center;
+      position: absolute;
+      width: 879px;
+    }
+  }
+
+  .third {
+    height: 230px;
+    .desc {
+      flex: 834 0 auto;
+      max-width: 834px;
+      padding: 0 52 0 79;
+    }
+
+    h3 {
+      font-size: 2.1rem;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 300;
+      letter-spacing: normal;
+      line-height: 1.77;
+      text-align: center;
+    }
+  }
+
+  .fourth {
+    .row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      flex-basis: 100%;
+      font-size: 35px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 300;
+      height: 213px;
+      line-height: 1.77;
+      letter-spacing: normal;
+      text-align: center;
+      width: 704px;
+
+      p {
+        margin-top: 0;
+      }
+
+      span {
+        font-weight: bold;
+        color: #363d81;
+      }
+    }
+
+    .icons {
+      a {
+        color: @black;
+      }
+    }
+  }
+}
