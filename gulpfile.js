@@ -128,7 +128,8 @@ gulp.task(
   gulp.series(function (done) {
     var target = gulp.src(config.dist.allHtml);
     var sources = gulp.src(config.dist.compiledSources, {
-      read: false
+      read: false,
+      allowEmpty: true
     });
     var stream = target
       .pipe(
@@ -188,16 +189,3 @@ gulp.task(
     });
   })
 );
-
-// gulp.task("watch", function(done) {
-//   livereload.listen(options);
-//   gulp.watch("less/*.less", gulp.series("less"));
-//   done();
-// });
-
-// gulp.task("default", gulp.series("serve", "watch"));
-
-/*
-gulp.task('default', function() {
-  console.log('Gulp is running!')
-});*/

@@ -40,8 +40,7 @@ module.exports = {
         compiledSources: [
             'dist/**/*.js',
             'dist/node_modules/*.css',
-            'dist/styles/cavepot.css',
-            'dist/styles/home.css'
+            'dist/styles/*.css'
         ]
     }
 }
