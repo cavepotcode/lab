@@ -19,6 +19,7 @@ body {
 
     .logo {
       img {
+        display: none;
         transition: all ease 0.3s;
         width: 100px;
       }
@@ -30,7 +31,7 @@ body {
       width: 100%;
       display: flex;
       align-items: top;
-      
+
       .options {
         transition: all ease 0.3s;
         position: absolute;
@@ -93,8 +94,7 @@ body {
 }
 
 footer {
-  //margin-top: 100px;
-  min-height: 721px;
+  min-height: 620px;
   width: 100%;
   display: flex;
   background-color: @blue-footer;
@@ -106,29 +106,25 @@ footer {
     justify-content: space-between;
     flex-direction: column;
 
-    .company-info,
-    .social {
+    .logo {
+      background: url(../assets/img/logo-footer.png) no-repeat;
+      background-size: cover;
+      max-width: 451px;
+      margin-top: 31px;
+      height: 67px;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      color: white;
+      flex: 366 0 auto;
       width: 100%;
     }
 
     .company-info {
-      justify-content: space-around;
       align-items: start;
-
-      .logo {
-        background: url(../assets/img/logo-footer.png) no-repeat;
-        background-size: cover;
-        max-width: 451px;
-        margin-top: 31px;
-        height: 67px;
-        display: flex;
-        flex: 366 0 auto;
-        width: 100%;
-      }
+      // align-items: center;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
 
       .info {
         .title {
@@ -166,6 +162,7 @@ footer {
 
     .social {
       justify-content: flex-end;
+      display: flex;
 
       .rights,
       .icons-social {
@@ -230,4 +227,16 @@ footer {
 
 .end {
   align-items: flex-end !important;
+}
+
+@media screen and (max-width: 667px) {
+  footer {
+    padding: 40px 35px 29px 35px;
+    .footer-container {
+      display: flex;
+      .company-info {
+        flex-direction: column;
+      }
+    }
+  }
 }

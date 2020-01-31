@@ -46,11 +46,11 @@
 
   .first {
     display: flex;
-    height: 662px;
+    min-height: 520px;
     justify-content: center;
-    margin-bottom: 67px;
+    margin-bottom: 0;
     width: 100%;
-    
+
     .image1 {
       background: url("../assets/img/home/layer-1.png");
       background-repeat: no-repeat;
@@ -58,7 +58,7 @@
       flex: 452 0 auto;
       height: 662px;
       position: absolute;
-      width: 941px;
+      width: 640px;
     }
 
     .image2 {
@@ -68,7 +68,7 @@
       flex: 617 0 auto;
       height: 718px;
       position: absolute;
-      width: 798px;
+      width: 543px;
     }
 
     .image3 {
@@ -78,12 +78,12 @@
       height: 605px;
       margin-top: 112px;
       position: absolute;
-      width: 330px;
+      width: 225px;
     }
   }
 
   .second {
-    height: 130px;
+    min-height: 130px;
     .image4 {
       background: url("../assets/img/home/layer-cavepotlab.png");
       background-repeat: no-repeat;
@@ -92,16 +92,16 @@
       height: 130px;
       justify-content: center;
       position: absolute;
-      width: 879px;
+      width: 600px;
     }
   }
 
   .third {
-    height: 230px;
+    min-height: 230px;
     .desc {
       flex: 834 0 auto;
-      max-width: 834px;
-      padding: 0 52 0 79;
+      max-width: 700px;
+      padding: 0 50 0 50;
     }
 
     h3 {
@@ -120,9 +120,11 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .column {
+      align-items: center;
       color: #000000;
       display: flex;
       flex-direction: column;
@@ -135,6 +137,7 @@
       height: 213px;
       line-height: 1.77;
       letter-spacing: normal;
+      padding: 0 50 0 50;
       text-align: center;
       width: 704px;
 
@@ -151,6 +154,73 @@
     .icons {
       a {
         color: @black;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    .first {
+      height: 662px;
+      margin-bottom: 67px;
+      .image1 {
+        width: 941px;
+      }
+
+      .image2 {
+        width: 798px;
+      }
+
+      .image3 {
+        width: 330px;
+      }
+    }
+    .second {
+      .image4 {
+        width: 879px;
+      }
+    }
+
+    .third {
+      .desc {
+        max-width: 834px;
+        padding: 0 52 0 79;
+      }
+    }
+
+    .fourth {
+      // .row {
+
+      // }
+      .column {
+        flex-basis: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-container {
+    .fourth {
+      // .row {
+
+      // }
+      .column {
+        flex-basis: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .main-container {
+    .fourth {
+      // .row {
+
+      // }
+      .column {
+        flex-basis: 50%;
       }
     }
   }
