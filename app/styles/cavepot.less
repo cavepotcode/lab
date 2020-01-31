@@ -98,7 +98,7 @@ footer {
   width: 100%;
   display: flex;
   background-color: @blue-footer;
-  padding: 146px 35px 29px 35px;
+  padding: 40px 35px 29px 35px;
 
   .footer-container {
     display: flex;
@@ -119,10 +119,9 @@ footer {
 
     .company-info {
       align-items: start;
-      // align-items: center;
       color: white;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-around;
       width: 100%;
 
@@ -229,14 +228,14 @@ footer {
   align-items: flex-end !important;
 }
 
-@media screen and (max-width: 667px) {
+@media screen and (min-width: 768px) {
   footer {
-    padding: 40px 35px 29px 35px;
+    padding: 146px 35px 29px 35px;
     .footer-container {
-      display: flex;
       .company-info {
-        flex-direction: column;
+        flex-direction: row;
       }
     }
   }
 }
+
