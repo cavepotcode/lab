@@ -117,6 +117,10 @@ footer {
       width: 100%;
     }
 
+    .hide-mobile {
+      display: none !important;
+    }
+
     .company-info {
       align-items: start;
       color: white;
@@ -151,7 +155,8 @@ footer {
         }
 
         .cavepot-logo {
-          margin-top: 80px;
+          align-items: center;
+          margin-top: 60px;
           img {
             height: 122px;
           }
@@ -228,14 +233,28 @@ footer {
   align-items: flex-end !important;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   footer {
-    padding: 146px 35px 29px 35px;
+    padding: 10px 30px 30px 30px;
     .footer-container {
+      // .hide-mobile {
+      //   display: none !important;
+      // }
+
       .company-info {
+        flex-direction: row;
+
+        .info {
+          .cavepot-logo {
+            // align-items: center;
+            margin-top: 80px;
+          }
+        }
+      }
+
+      .social {
         flex-direction: row;
       }
     }
   }
 }
-
