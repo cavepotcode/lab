@@ -44,7 +44,7 @@ body {
         }
 
         .link {
-          color: @blue-link-header;
+          color: @blueberry;
           font-family: Montserrat;
           font-size: 1.75rem;
           font-weight: 600;
@@ -58,7 +58,7 @@ body {
             position: absolute;
             width: 0%;
             height: 4px;
-            background: @blue-link-header;
+            background: @blueberry;
             top: 3rem;
             left: 0;
             border-bottom-left-radius: 2px;
@@ -94,17 +94,18 @@ body {
 }
 
 footer {
-  min-height: 620px;
+  min-height: 530px;
   width: 100%;
   display: flex;
-  background-color: @blue-footer;
+  background-color: @blueberry;
   padding: 40px 35px 29px 35px;
 
   .footer-container {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 
     .logo {
       background: url(../assets/img/logo-footer.png) no-repeat;
@@ -118,15 +119,15 @@ footer {
     }
 
     .hide-mobile {
-      display: none !important;
+      display: none;
     }
 
     .company-info {
-      align-items: start;
-      color: white;
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: space-around;
+      align-items: center;
+      color: white;
       width: 100%;
 
       .info {
@@ -155,10 +156,20 @@ footer {
         }
 
         .cavepot-logo {
-          align-items: center;
-          margin-top: 60px;
+          align-self: center;
+          margin-bottom: 40px;
+
           img {
             height: 122px;
+          }
+        }
+
+        &:last-child {
+          display: flex;
+          flex-direction: column;
+
+          li:first-child {
+            margin: 10px 0;
           }
         }
       }
@@ -167,6 +178,7 @@ footer {
     .social {
       justify-content: flex-end;
       display: flex;
+      flex-direction: column-reverse;
 
       .rights,
       .icons-social {
@@ -207,7 +219,7 @@ footer {
           padding: 9px 12px;
 
           a {
-            color: @blue-footer !important;
+            color: @blueberry  !important;
             text-decoration: none;
             font-size: 3rem;
           }
@@ -233,27 +245,34 @@ footer {
   align-items: flex-end !important;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   footer {
-    padding: 10px 30px 30px 30px;
     .footer-container {
-      // .hide-mobile {
-      //   display: none !important;
-      // }
-
       .company-info {
         flex-direction: row;
+        align-items: start;
 
         .info {
           .cavepot-logo {
-            // align-items: center;
-            margin-top: 80px;
+            align-self: flex-start;
+            margin-bottom: 0;
           }
+        }
+
+        .hide-mobile {
+          display: block;
         }
       }
 
       .social {
         flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+      }
+
+      .logo {
+        background-size: contain;
+        max-width: 350px;
       }
     }
   }
