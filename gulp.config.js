@@ -17,8 +17,7 @@ module.exports = {
         ],
         compiledLibsScripts: [
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/bootstrap/dist/js/bootstrap.min.js',
-            'node_modules/carousel/index.js'
+            'node_modules/bootstrap/dist/js/bootstrap.min.js'
         ],
         compiledLibsFonts: [
             'node_modules/font-awesome/fonts/fontawesome-webfont.eot',
