@@ -1,21 +1,18 @@
 {
     "header": {
         "home": "HOME",
-        "how.we.do.it": "HOW WE DO IT",
-        "projects": "PROJECTS",
-        "about.us": "ABOUT US",
         "contact.us": "CONTACT US",
         "blog": "BLOG",
-        "our.lab": "OUR LAB",
+        "how.we.do.it": "COMPANY",
         "alt": {
             "img.1": "Header cavepot logo"
         }
     },
     "technologies-changes": {
-        "title": "Technology changes constantly, so do we!",
-        "subtitle": "We are a <strong>software</strong> and app development company keenz on pixel perfect solutions that bring your <strong> ideas </strong> to life!",
+        "title": "Hi! Welcome to our lab! ",
+        "subtitle": "Get your gloves and safety glasses on, because we’re about to make something big.",
         "alt": {
-            "img.1": "Technologies changes banner image"
+            "img.1": "Welcome"
         }
     },
     "not-found": {
@@ -438,25 +435,17 @@
                 "label": "Home",
                 "link": "/"
             },
-            "how-we-do-it": {
-                "label": "How we do it",
-                "link": "/home/how-we-do-it"
-            },
-            "projects": {
-                "label": "Projects",
-                "link": "/projects"
-            },
-            "about-us": {
-                "label": "About us",
-                "link": "/aboutus"
+            "contact.us": {
+                "label": "Contact us",
+                "link": "https://cavepotcode.github.io/web/contact-us"
             },
             "blog": {
                 "label": "Blog",
                 "link": "https://blog.cavepot.com/"
             },
-            "our-lab": {
-                "label": "Our lab",
-                "link": "https://www.cavepotlab.com/"
+            "company": {
+                "label": "Our Company",
+                "link": "https://www.cavepotlab.com/web/"
             },
             "contact-us": {
                 "label": "Contact us",

@@ -20,37 +20,31 @@ const ToTop = ({ children }) => {
 function App() {
   return (
     <div className="app">
-
       <div className="grid">
-
-        
-          <ToTop>
-            <Header />
-            <div id="container">
-              <Routes>
-                <Route path="/" element={<Navigate replace to="/home" />} />
-                <Route path="/home" element={<HomePage />} >
-                  <Route path=":menu" element={<HomePage />} />
-                </Route>
-                <Route path="/web" element={<HomePage />} />
-                {/* <Route path="/how-we-do-it" element={<HomePage />} /> */}
-                <Route path="/contact" element={<ContactPage />} >
-                  <Route path=":frm" element={<ContactPage />} />
-                </Route>
-                <Route path="/aboutus" element={<AboutUsPage />} />
-                <Route path="/projects" element={<ProjectsPage />} >
-                </Route>
-                <Route path="/project/:id" element={<Project />} >
-                </Route>
-                <Route path="/404" element={<NotFoundPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </div>
-
-            <Footer />
-
-          </ToTop>
-        
+        <ToTop>
+          <Header />
+          <div id="container">
+            <Routes>
+              <Route path="/" element={<Navigate replace to="/home" />} />
+              <Route path="/home" element={<HomePage />} >
+                <Route path=":menu" element={<HomePage />} />
+              </Route>
+              <Route path="/web" element={<HomePage />} />
+              {/* <Route path="/how-we-do-it" element={<HomePage />} /> */}
+              <Route path="/contact" element={<ContactPage />} >
+                <Route path=":frm" element={<ContactPage />} />
+              </Route>
+              <Route path="/aboutus" element={<AboutUsPage />} />
+              <Route path="/projects" element={<ProjectsPage />} >
+              </Route>
+              <Route path="/project/:id" element={<Project />} >
+              </Route>
+              <Route path="/404" element={<NotFoundPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </div>
+          {/*<Footer />*/}
+        </ToTop>
       </div>
     </div>
   );

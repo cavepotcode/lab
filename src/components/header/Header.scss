@@ -19,6 +19,21 @@ $logoHeight: 35px;
     z-index: 1000;
     justify-content: space-between;
     width: 100%;
+    .we-love-to-explore {
+        position: absolute;
+        left: calc(
+                (42 / 52) * 8 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + (52 / 52) *#{$logoHeight} + 3.6px
+        );
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #4ac1c6;
+    }
     .img-wrapper {
         z-index: 1;
         cursor: pointer;
@@ -36,7 +51,10 @@ $logoHeight: 35px;
         #e,
         #p,
         #o,
-        #t {
+        #t,
+        #lab_l,
+        #lab_a,
+        #lab_b {
             position: absolute;
             display: block;
             height: $logoHeight;
@@ -47,7 +65,10 @@ $logoHeight: 35px;
         }
         #c,
         #a,
-        #v {
+        #v,
+        #lab_l,
+        #lab_a,
+        #lab_b {
             width: calc((42 / 52) *#{$logoHeight});
         }
         #e,
@@ -86,8 +107,26 @@ $logoHeight: 35px;
             background-image: url(../../assets/img/logo/t.png);
             width: calc((31 / 52) *#{$logoHeight});
         }
+        
+        #lab_l {
+            left: calc(
+                (42 / 52) * 4 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + (52 / 52) *#{$logoHeight} + 3.6px
+            );
+            background-image: url(../../assets/img/logo/a.png);
+        }
+        #lab_a {
+            left: calc(
+                (42 / 52) * 5 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + (52 / 52) *#{$logoHeight} + 3.6px
+            );
+            background-image: url(../../assets/img/logo/a.png);
+        }
+        #lab_b {
+            left: calc(
+                (42 / 52) * 6 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + (52 / 52) *#{$logoHeight} + 3.6px
+            );
+            background-image: url(../../assets/img/logo/a.png);
+        }
     }
-
     &.colapse {
         border-bottom: solid $BorderWidth $BorderBlack;
         transition: border-bottom ease 0.3s;

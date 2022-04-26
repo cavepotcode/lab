@@ -12,7 +12,7 @@ export const TechnologiesChanges = () => {
                 <label className="subtitle"><Trans>{t("technologies-changes.subtitle")}</Trans></label>
             </div>
             <div className="img-technologies">
-                <img src={AllImages.Banner} alt={t("technologies-changes.alt.img.1")} />
+                <img src={AllImages.Welcome} alt={t("technologies-changes.alt.img.1")} />
             </div>
         </div>
     )

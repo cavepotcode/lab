@@ -30,6 +30,7 @@ export const Banner3 = require('../assets/img/banner3.png').default;
 export const AboutUsBanner = require('../assets/img/aboutUsBanner.png').default;
 export const AboutUsPot = require('../assets/img/aboutUsPot.png').default;
 export const AboutUsDig = require('../assets/img/aboutUsDig.png').default;
+export const Welcome = require('../assets/img/welcome.png').default;
 
 //IMG GENERALES
 export const Olla = require('../assets/img/olla.png').default;

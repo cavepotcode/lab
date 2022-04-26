@@ -1,21 +1,18 @@
 {
     "header": {
         "home": "HOME",
-        "how.we.do.it": "HOW WE DO IT",
-        "projects": "PROJECTS",
-        "about.us": "ABOUT US",
         "contact.us": "CONTACT US",
         "blog": "BLOG",
-        "our.lab": "OUR LAB",
+        "how.we.do.it": "COMPANY",
         "alt": {
             "img.1": "Header cavepot logo"
         }
     },
     "technologies-changes": {
-        "title": "Technology changes constantly, so do we!",
-        "subtitle": "We are a <strong>software</strong> and app development company keenz on pixel perfect solutions that bring your <strong> ideas </strong> to life!",
+        "title": "Hi! Welcome to our lab! ",
+        "subtitle": "Get your gloves and safety glasses on, because we’re about to make something big.",
         "alt": {
-            "img.1": "Technologies changes banner image"
+            "img.1": "Welcome"
         }
     },
     "not-found": {
@@ -243,7 +240,7 @@
                 "imgX": 0,
                 "imgY": -20,
                 "w": 110,
-                "color": "#FAD352",
+                "color": "#f4ac40",
                 "gridArea": "span 2 / auto",
                 "imgs": ["1","2"],
                 "description": [
@@ -267,7 +264,7 @@
                 "imgX": 0,
                 "imgY": 0,
                 "w": 50,
-                "color": "#4ac1c6",
+                "color": "#5bd6db",
                 "imgs": ["1","2"],
                 "gridArea": "span 1 / auto ",
                 "description": [
@@ -295,7 +292,7 @@
                 "imgY": 218,
                 "w": 110,
                 "imgs": ["1","2","3"],
-                "color": "#e5405d",
+                "color": "#5bd6db",
                 "gridArea": "span 2 /auto",
                 "description": [
                     {
@@ -318,7 +315,7 @@
                 "imgX": 0,
                 "imgY": 0,
                 "w": 50,
-                "color": "#FAD352",
+                "color": "#f2546e",
                 "gridArea": "span 1 / auto",
                 "imgs": ["1","2"],
                 "description": [
@@ -341,7 +338,7 @@
                 "imgX": 16,
                 "imgY": 0,
                 "imgs": ["1","2","4"],
-                "color": "#e5405d",
+                "color": "#f2546e",
                 "gridArea": "span 2 / auto",
                 "description": [
                     {
@@ -372,7 +369,7 @@
                 "imgX": 0,
                 "imgY": 0,
                 "w": 50,
-                "color": "#4ac1c6",
+                "color": "#f1d83a",
                 "imgs": ["1","2"],
                 "gridArea": "span 1/ auto",
                 "description": [
@@ -385,7 +382,9 @@
                         "desc": "AI is a marketplace with a variety of AI applications that analyze different events. Autolearn AI enables the user to detect a security vulnerability. This is done by scanning different sources like server logs and emails, detecting malicious behaviors. Moreover you can get an app for scanning documents and getting the info from them. In addition to that if for example, you get company's feedback from your customers you can analyze and classify it in Jira tickets."
                     }
                 ]
-            },           
+            },
+            
+           
             "rcd": {
                 "title": "RCD",
                 "text": "RCD is a national reference for recycling construction materials in an environmentally friendly cycle.",
@@ -395,7 +394,7 @@
                 "imgX": 0,
                 "imgY": 0,
                 "w": 50,
-                "color": "#FAD352",
+                "color": "#f4ac40",
                 "imgs": ["1","2"],
                 "gridArea": "span 1 / auto",
                 "description": [
@@ -436,25 +435,17 @@
                 "label": "Home",
                 "link": "/"
             },
-            "how-we-do-it": {
-                "label": "How we do it",
-                "link": "/home/how-we-do-it"
-            },
-            "projects": {
-                "label": "Projects",
-                "link": "/projects"
-            },
-            "about-us": {
-                "label": "About us",
-                "link": "/aboutus"
+            "contact.us": {
+                "label": "Contact us",
+                "link": "https://cavepotcode.github.io/web/contact-us"
             },
             "blog": {
                 "label": "Blog",
                 "link": "https://blog.cavepot.com/"
             },
-            "our-lab": {
-                "label": "Our lab",
-                "link": "https://www.cavepotlab.com/"
+            "company": {
+                "label": "Our Company",
+                "link": "https://www.cavepotlab.com/web/"
             },
             "contact-us": {
                 "label": "Contact us",
