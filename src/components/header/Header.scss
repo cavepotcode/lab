@@ -301,6 +301,9 @@ $logoHeight: 35px;
 
 @include media-sm {
     .header {
+        .we-love-to-explore{
+            display: none;
+        }
         .img-wrapper {
             padding-left: 36px;
             img {
