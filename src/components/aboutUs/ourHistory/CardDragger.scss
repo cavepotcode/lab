@@ -1,0 +1,16 @@
+@import "./../../../styles/main";
+
+
+.card-dragger{
+    position: relative;
+    .card-conect-end{
+        margin-left: 10px;
+        height: 20px;
+        width: 20px;
+        background-color: $OH-orange;
+        box-shadow: 0px 13px 7px 0px $Shadow;
+        z-index: 2;
+        margin-top: 110px;
+    }
+    
+}

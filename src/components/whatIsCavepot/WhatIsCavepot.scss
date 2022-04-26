@@ -1,0 +1,118 @@
+@import "../../styles/mixin";
+@import "../../styles/variables";
+
+.what-is-cavepot {
+    grid-row: 2;
+    @include textBasis(0.875rem);
+    .title-wrapper {
+        display: flex;
+        justify-content: center;
+        .title {
+            @include textBasisBold($title);
+        }
+    }
+    label {
+        @include textBasis($text);
+        text-align: center;
+        span {
+            font-weight: 600;
+        }
+    }
+    .message-container {
+        display: flex;
+        justify-content: center;
+        button {
+            background-color: $CeriseRed;
+        }
+        button:hover{
+            background-color: darken($CeriseRed,$darkerPorcentaje);
+        }
+    }
+    #short-blue-line {
+        grid-column: 1;
+        grid-row: 3;
+        width: 90%;
+        height: 7px;
+        justify-self: flex-start;
+        align-self: flex-end;
+        background-color: $SeaSerpent;
+        opacity: 0.6;
+        border-top-right-radius: 10px 10px;
+        border-bottom-right-radius: 10px 10px;
+    }
+    #blue-line {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+        width: 60%;
+        height: 8px;
+        align-self: flex-end;
+        justify-self: flex-start;
+        background-color: $SeaSerpent;
+        opacity: 0.6;
+        border-top-right-radius: 10px 10px;
+        border-bottom-right-radius: 10px 10px;
+    }
+
+    .wrapper {
+        width: 100%;
+        display: inline-flex;
+        gap: 79px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: $spaceBetween45;
+        margin-bottom: $spaceBetween45;
+        label:nth-child(1) {
+            width: 343px;
+        }
+        label:nth-child(2) {
+            width: 288px;
+            display: block;
+            justify-self: center;
+            align-self: center;
+        }
+        label:nth-child(3) {
+            width: 341px;
+        }
+    }
+}
+
+@include media-md {
+    .what-is-cavepot {
+        .wrapper {
+            display: grid !important;
+            label {
+                font-size: 1.438rem !important ;
+            }
+            label:nth-child(1) {
+                width: 375px !important;
+            }
+            label:nth-child(2) {
+                width: 371px !important;
+            }
+            label:nth-child(3) {
+                width: 371px !important;
+            }
+        }
+        .message-container {
+            margin-top: 118px;
+            // button {
+            //     width: 495px;
+            //     padding: 0px 10px;
+            //     margin: 0 $mainMDRightLeftPadding;
+            // }
+        }
+    }
+}
+
+
+@include media-sm {
+    .what-is-cavepot {
+        .message-container {
+            margin-top: 118px;
+            // button {
+            //     padding: 2px 5px;
+            //     margin: 0 $mainSMRightLeftPadding;
+            // }
+        }
+    }
+}

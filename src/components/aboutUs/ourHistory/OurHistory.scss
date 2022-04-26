@@ -1,0 +1,23 @@
+@import "./../../../styles/main";
+
+.our-history{
+    display: flex;
+    flex-direction: column;
+    gap: $spaceBetween45;
+    margin-bottom: 76px;
+    .title{
+        width: 100%;
+        @include textBasisBold($title);
+        text-align: center;
+    }
+
+    .react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@include media-md{
+    .our-history{
+        padding: 0 $mainMDRightLeftPadding;
+    }
+}

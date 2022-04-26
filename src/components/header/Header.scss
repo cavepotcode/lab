@@ -1,0 +1,318 @@
+@import "../../styles/main";
+@import "../../styles/variables";
+@import "../../styles/mixin";
+
+$logoHeight: 35px;
+
+.header {
+    border-bottom: solid $BorderWidth transparent;
+    transition: border-bottom ease 0.3s;
+    &.open {
+        opacity: 1;
+    }
+    display: flex;
+    align-items: center;
+    height: $spaceBetween;
+    position: fixed;
+    background-color: white;
+    opacity: 0.9;
+    z-index: 1000;
+    justify-content: space-between;
+    width: 100%;
+    .img-wrapper {
+        z-index: 1;
+        cursor: pointer;
+        position: relative;
+        margin-left: 23px;
+        img {
+            height: 42px;
+        }
+        display: block;
+        width: calc(267 / 52 * #{$logoHeight});
+        height: $logoHeight;
+        #c,
+        #a,
+        #v,
+        #e,
+        #p,
+        #o,
+        #t {
+            position: absolute;
+            display: block;
+            height: $logoHeight;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: all ease 1s;
+            top: 0;
+        }
+        #c,
+        #a,
+        #v {
+            width: calc((42 / 52) *#{$logoHeight});
+        }
+        #e,
+        #p {
+            width: calc((27 / 52) *#{$logoHeight});
+        }
+        #c {
+            left: 0;
+            background-image: url(../../assets/img/logo/c.png);
+        }
+        #a {
+            left: calc((42 / 52) *#{$logoHeight});
+            background-image: url(../../assets/img/logo/a.png);
+        }
+        #v {
+            left: calc((42 / 52) * 2 *#{$logoHeight} - 9px);
+            background-image: url(../../assets/img/logo/v.png);
+        }
+        #e {
+            left: calc((42 / 52) * 3 *#{$logoHeight} - 6px);
+            background-image: url(../../assets/img/logo/e.png);
+        }
+        #p {
+            left: calc((42 / 52) * 3 *#{$logoHeight} + (27 / 52) *#{$logoHeight} );
+            background-image: url(../../assets/img/logo/p.png);
+        }
+        #o {
+            left: calc((42 / 52) * 3 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + 2.6px);
+            background-image: url(../../assets/img/logo/o.png);
+            width: calc((52 / 52) *#{$logoHeight});
+        }
+        #t {
+            left: calc(
+                (42 / 52) * 3 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + (52 / 52) *#{$logoHeight} + 3.6px
+            );
+            background-image: url(../../assets/img/logo/t.png);
+            width: calc((31 / 52) *#{$logoHeight});
+        }
+    }
+
+    &.colapse {
+        border-bottom: solid $BorderWidth $BorderBlack;
+        transition: border-bottom ease 0.3s;
+        #c,
+        #a,
+        #v,
+        #e,
+        #p,
+        #o,
+        #t {
+            position: absolute;
+            left: 0;
+        }
+        #c,
+        #a,
+        #v,
+        #e,
+        #p,
+        #t {
+            opacity: 0;
+            transition: all ease 0.3s;
+        }
+        #o {
+            transform: rotate(-360deg);
+            transition: all ease 1s;
+        }
+    }
+
+    .menu-btn {
+        align-self: center;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        right: 25px;
+        height: 20px;
+        width: 28px;
+        cursor: pointer;
+        @include transition-ease;
+
+        &__burger {
+            position: absolute;
+            right: 0;
+            top: 8px;
+            width: 28px;
+            height: 3px;
+            border-radius: 10px;
+            background-color: #8156ea;
+            @include transition-ease;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -8px;
+                width: 28px;
+                height: 3px;
+                border-radius: 10px;
+                background: #8156ea;
+                @include transition-ease;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 8px;
+                width: 28px;
+                height: 3px;
+                background: #8156ea;
+                border-radius: 10px;
+                @include transition-ease;
+            }
+            &.open {
+                transform: rotate(720deg);
+                background: transparent;
+
+                &::before {
+                    transform: rotate(45deg) translate(5px, 8px);
+                }
+                &::after {
+                    width: 28px;
+                    transform: rotate(-45deg) translate(3px, -7px);
+                }
+            }
+        }
+    }
+
+    .nav {
+        // background-color: white;
+        top: 0;
+        left: 0;
+        opacity: 0.98;
+        visibility: visible;
+        &.open {
+            background-color: $White;
+            visibility: hidden;
+            .menu-nav {
+                &__item {
+                    a {
+                        font-size: 23px;
+                        font-weight: 600;
+                    }
+                    display: inline;
+                    padding-right: 1.5rem;
+                }
+                &.open {
+                    padding: 0 !important;
+                }
+            }
+        }
+        .menu-nav {
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+            background: transparent;
+            text-align: right;
+
+            &__item {
+                display: inline;
+                padding-right: 1.5rem;
+            }
+
+            &__link {
+                font-size: 1.5rem;
+            }
+
+            &__item {
+                transform: translateX(100vw);
+                @include transition-ease;
+
+                &.open {
+                    transform: translateX(0);
+                }
+            }
+            &__link {
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-block;
+                text-transform: uppercase;
+                padding: 32px 0;
+                font-weight: 300;
+                @include textBasis(0.719rem);
+                @include transition-ease;
+
+                &.active {
+                    // font-family: Montserrat-Bold;
+                    // font-weight: bolder;
+                    @include textBasisBold(0.719rem);
+                }
+            }
+
+            &__link-contact {
+                text-decoration: none;
+                padding: 7px;
+                border-radius: 5px;
+                background-color: $CeriseRed;
+                color: white;
+                font-weight: bold;
+                border: $BorderWidth $BorderBlack solid;
+            }
+
+            &__link-contact:hover {
+                background-color: darken($CeriseRed, $darkerPorcentaje);
+            }
+        }
+    }
+
+    @for $i from 1 through 7 {
+        .menu-nav__item:nth-child(#{$i}) {
+            transition-delay: ($i * 0.1s)+0.15s;
+        }
+    }
+}
+
+@include media-sm {
+    .header {
+        .img-wrapper {
+            padding-left: 36px;
+            img {
+                width: 150px;
+                height: 30px;
+            }
+        }
+    }
+}
+// maximo 1024px
+@include media-lg {
+    .header {
+        .menu-btn {
+            display: block;
+            @include transition-ease;
+        }
+        .nav {
+            visibility: hidden;
+
+            .menu-nav {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                overflow: hidden;
+                background-color: rgb(224, 220, 220);
+                list-style-type: none;
+                padding-right: 1rem;
+                transform: translateY(-100%);
+                opacity: 0.9;
+                gap: 50px;
+                @include transition-ease;
+
+                &.open {
+                    transform: translateY(0);
+                }
+                &__item {
+                }
+                &__link {
+                    padding: 0;
+                }
+            }
+            &.open {
+                visibility: visible;
+                position: fixed;
+                width: 100%;
+            }
+        }
+        .img-wrapper {
+            z-index: 0;
+        }
+    }
+}

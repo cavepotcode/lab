@@ -1,0 +1,29 @@
+@import "./../../../styles/main";
+@import "./../../../styles/variables";
+
+.left-arrow {
+    right: 40px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.left-arrow,
+.right-arrow {    
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    top: -35px;
+    font-size: 30px;
+    color: $PineTree;
+    width: 19px;
+    height: 29px;
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+
+
