@@ -10,6 +10,7 @@ import { Link, scroller } from 'react-scroll';
 
 import './HomePage.scss';
 import { useEffect } from "react";
+import { Experiments } from "../../components/experiments/experiments";
 export function HomePage() {
   let params = useParams();
 
@@ -38,6 +39,7 @@ export function HomePage() {
   return (
     <div className="home-page">
       <TechnologiesChanges />
+      <Experiments />
       {/*
       <WhatIsCavepot />
       <WhatDoWeDo />

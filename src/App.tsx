@@ -26,7 +26,7 @@ function App() {
           <div id="container">
             <Routes>
               <Route path="/" element={<Navigate replace to="/home" />} />
-              <Route path="/home" element={<HomePage />} >
+              <Route path="/" element={<HomePage />} >
                 <Route path=":menu" element={<HomePage />} />
               </Route>
               <Route path="/lab" element={<HomePage />} />

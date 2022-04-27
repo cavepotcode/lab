@@ -1,0 +1,42 @@
+@import "../../styles/main";
+@import "../../styles/variables";
+@import "../../styles/mixin";
+
+.experiments {
+   .cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .card{
+        width: 30%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        border: solid 4px #000;
+        background-color: #fff;
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        .title{
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+    }
+   }
+   .button{
+
+   }
+}
+
+@include media-lg {
+    .experiments {
+        .cards{
+            .card{
+                width: 80%;
+            }
+        }
+    }
+}
