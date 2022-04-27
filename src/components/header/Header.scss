@@ -316,6 +316,9 @@ $logoHeight: 35px;
 // maximo 1024px
 @include media-lg {
     .header {
+        .we-love-to-explore{
+            display: none;
+        }
         .menu-btn {
             display: block;
             @include transition-ease;
