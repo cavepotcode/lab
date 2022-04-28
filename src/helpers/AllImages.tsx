@@ -31,6 +31,7 @@ export const AboutUsBanner = require('../assets/img/aboutUsBanner.png').default;
 export const AboutUsPot = require('../assets/img/aboutUsPot.png').default;
 export const AboutUsDig = require('../assets/img/aboutUsDig.png').default;
 export const Welcome = require('../assets/img/welcome.png').default;
+export const Laboratory = require('../assets/img/laboratory.png').default;
 
 //IMG GENERALES
 export const Olla = require('../assets/img/olla.png').default;
