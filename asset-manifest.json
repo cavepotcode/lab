@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/lab/static/css/main.92cf0172.chunk.css",
-    "main.js": "/lab/static/js/main.c7a24e84.chunk.js",
-    "main.js.map": "/lab/static/js/main.c7a24e84.chunk.js.map",
-    "runtime-main.js": "/lab/static/js/runtime-main.1a80ee9b.js",
-    "runtime-main.js.map": "/lab/static/js/runtime-main.1a80ee9b.js.map",
-    "static/js/2.f8beae83.chunk.js": "/lab/static/js/2.f8beae83.chunk.js",
-    "static/js/2.f8beae83.chunk.js.map": "/lab/static/js/2.f8beae83.chunk.js.map",
-    "static/js/3.ef651c15.chunk.js": "/lab/static/js/3.ef651c15.chunk.js",
-    "static/js/3.ef651c15.chunk.js.map": "/lab/static/js/3.ef651c15.chunk.js.map",
+    "main.css": "/lab/static/css/main.ab72d8c6.chunk.css",
+    "main.js": "/lab/static/js/main.5a86f211.chunk.js",
+    "main.js.map": "/lab/static/js/main.5a86f211.chunk.js.map",
+    "runtime-main.js": "/lab/static/js/runtime-main.89b8a82a.js",
+    "runtime-main.js.map": "/lab/static/js/runtime-main.89b8a82a.js.map",
+    "static/js/2.03d76a4d.chunk.js": "/lab/static/js/2.03d76a4d.chunk.js",
+    "static/js/2.03d76a4d.chunk.js.map": "/lab/static/js/2.03d76a4d.chunk.js.map",
+    "static/js/3.be7681e3.chunk.js": "/lab/static/js/3.be7681e3.chunk.js",
+    "static/js/3.be7681e3.chunk.js.map": "/lab/static/js/3.be7681e3.chunk.js.map",
     "index.html": "/lab/index.html",
-    "static/css/main.92cf0172.chunk.css.map": "/lab/static/css/main.92cf0172.chunk.css.map",
-    "static/js/2.f8beae83.chunk.js.LICENSE.txt": "/lab/static/js/2.f8beae83.chunk.js.LICENSE.txt",
+    "static/css/main.ab72d8c6.chunk.css.map": "/lab/static/css/main.ab72d8c6.chunk.css.map",
+    "static/js/2.03d76a4d.chunk.js.LICENSE.txt": "/lab/static/js/2.03d76a4d.chunk.js.LICENSE.txt",
     "static/media/1.png": "/lab/static/media/1.c23dbc34.png",
     "static/media/2.png": "/lab/static/media/2.ca4acf06.png",
     "static/media/3.png": "/lab/static/media/3.bc35a737.png",
@@ -31,12 +31,12 @@
     "static/media/pythonLinea.png": "/lab/static/media/pythonLinea.1c3a6ee8.png",
     "static/media/reactLinea.png": "/lab/static/media/reactLinea.92d51332.png",
     "static/media/virtual-care.png": "/lab/static/media/virtual-care.3ba9d4b4.png",
-    "static/media/TechnologiesChanges.scss": "/lab/static/media/welcome.1a9cd2f8.png"
+    "static/media/welcome.scss": "/lab/static/media/welcome.1a9cd2f8.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.1a80ee9b.js",
-    "static/js/2.f8beae83.chunk.js",
-    "static/css/main.92cf0172.chunk.css",
-    "static/js/main.c7a24e84.chunk.js"
+    "static/js/runtime-main.89b8a82a.js",
+    "static/js/2.03d76a4d.chunk.js",
+    "static/css/main.ab72d8c6.chunk.css",
+    "static/js/main.5a86f211.chunk.js"
   ]
 }
