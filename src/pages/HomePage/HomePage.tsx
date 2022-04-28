@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { ClientSay } from "../../components/clientSay/ClientSay";
 import { HowWeDoIt } from "../../components/howWeDoIt/HowWeDoIt";
 import { Investigation } from "../../components/investigation/Investigation";
-import { TechnologiesChanges } from "../../components/technologiesChanges/TechnologiesChanges";
+import { Welcome } from "../../components/welcome/welcome";
 import { TechnologiesThatWeUse } from "../../components/technologiesThatWeUse/TechnologiesThatWeUse";
 import { WhatDoWeDo } from "../../components/whatDoWeDo/WhatDoWeDo";
 import WhatIsCavepot from "../../components/whatIsCavepot/WhatIsCavepot";
@@ -38,7 +38,7 @@ export function HomePage() {
 
   return (
     <div className="home-page">
-      <TechnologiesChanges />
+      <Welcome />
       <Experiments />
       {/*
       <WhatIsCavepot />

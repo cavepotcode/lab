@@ -1,5 +1,9 @@
 import { Trans, useTranslation } from 'react-i18next';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import './experiments.scss';
+
+library.add(faGithub);
 
 export const Experiments = () => {
     const [t] = useTranslation("global");
@@ -20,15 +24,11 @@ export const Experiments = () => {
             <div className='subTitle'>gfdhfdhd fshfdshf dshdfsh to disrupt ss dffg drhdh </div>
           </div>
         </div>
-        {/*
-        <div className="textwrapper">
-            <label className="title">{t("technologies-changes.title")}</label>
-            <label className="subtitle"><Trans>{t("technologies-changes.subtitle")}</Trans></label>
+        <div className='button'>
+          <a href='https://github.com/cavepotcode/' target='_blank'>
+            <span>Take a look at some of our experiments</span>
+          </a>
         </div>
-        <div className="img-technologies">
-            <img src={AllImages.Welcome} alt={t("technologies-changes.alt.img.1")} />
-        </div>
-    */}
       </div>
     )
 }

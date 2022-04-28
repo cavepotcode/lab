@@ -1,19 +1,17 @@
 @import "../../styles/main";
 //@import "../../styles/mixin";
 
-.technologies-changes {
+.welcome {
     display: flex;
     gap: 16px;
     width: 100%;
     justify-content: space-evenly;
-    height: 628px;
-
     .textwrapper {
-        max-width: 45rem;
+        max-width: 40rem;
         transition: left 0.5s;
         display: flex;
         flex-direction: column;
-        text-align: left;
+        text-align: center;
         justify-content: center;
         padding: 0 30px 0 30px;
         animation: showUp 0.5s linear forwards;
@@ -21,9 +19,11 @@
         .title {
             @include textBasisBold($pageTitle);
             padding-bottom: 18px;
+            text-align: center;
         }
         .subtitle {
             @include textBasis($pageSubtitle);
+            text-align: center;
         }
         label{
             align-self: center;
@@ -31,9 +31,9 @@
         }
         transition-delay: 15s;
     }
-    .img-technologies {
-        max-width: 30rem;
-        min-width: 30rem;
+    .img {
+        max-width: 25rem;
+        min-width: 25rem;
         display: flex;
         justify-content: center;
         align-items: center;

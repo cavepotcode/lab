@@ -22,8 +22,9 @@ $logoHeight: 35px;
     .we-love-to-explore {
         position: absolute;
         left: calc(
-                (42 / 52) * 8 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + (52 / 52) *#{$logoHeight} + 3.6px
+                (42 / 52) * 7 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + (52 / 52) *#{$logoHeight} + 3.6px
         );
+        transition: all ease 1s;
         font-family: Montserrat;
         font-size: 18px;
         font-weight: bold;
@@ -51,7 +52,6 @@ $logoHeight: 35px;
         #e,
         #p,
         #o,
-        #t,
         #lab_l,
         #lab_a,
         #lab_b {
@@ -100,31 +100,23 @@ $logoHeight: 35px;
             background-image: url(../../assets/img/logo/o.png);
             width: calc((52 / 52) *#{$logoHeight});
         }
-        #t {
-            left: calc(
-                (42 / 52) * 3 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + (52 / 52) *#{$logoHeight} + 3.6px
-            );
-            background-image: url(../../assets/img/logo/t.png);
-            width: calc((31 / 52) *#{$logoHeight});
-        }
-        
         #lab_l {
             left: calc(
-                (42 / 52) * 4 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + (52 / 52) *#{$logoHeight} + 3.6px
+                (42 / 52) * 3 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + #{$logoHeight} + 3.6px
             );
-            background-image: url(../../assets/img/logo/a.png);
+            background-image: url(../../assets/img/logo/tl.png);
         }
         #lab_a {
             left: calc(
-                (42 / 52) * 5 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + (52 / 52) *#{$logoHeight} + 3.6px
+                (42 / 52) * 4 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + #{$logoHeight} + 3.6px
             );
             background-image: url(../../assets/img/logo/a.png);
         }
         #lab_b {
             left: calc(
-                (42 / 52) * 6 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + (52 / 52) *#{$logoHeight} + 3.6px
+                (42 / 52) * 5 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + #{$logoHeight} + 3.6px
             );
-            background-image: url(../../assets/img/logo/a.png);
+            background-image: url(../../assets/img/logo/b.png);
         }
     }
     &.colapse {
@@ -135,8 +127,7 @@ $logoHeight: 35px;
         #v,
         #e,
         #p,
-        #o,
-        #t {
+        #o {
             position: absolute;
             left: 0;
         }
@@ -144,14 +135,27 @@ $logoHeight: 35px;
         #a,
         #v,
         #e,
-        #p,
-        #t {
+        #p {
             opacity: 0;
             transition: all ease 0.3s;
         }
         #o {
             transform: rotate(-360deg);
             transition: all ease 1s;
+        }
+        #lab_l {
+            left: calc(2 * (27 / 52) *#{$logoHeight} + 3.6px);
+            background-image: url(../../assets/img/logo/tl.png);
+        }
+        #lab_a {
+            left: calc((42 / 52)  *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + 3.6px);
+        }
+        #lab_b {
+            left: calc((42 / 52) * 2 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + 3.6px);
+        }
+        .we-love-to-explore {
+            transition: all ease 1s;
+            left: calc((42 / 52) * 4 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + 3.6px);
         }
     }
 

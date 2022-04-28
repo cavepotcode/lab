@@ -9,7 +9,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     .card{
-        width: 30%;
+        width: 25%;
         margin: 20px auto;
         padding: 20px;
         border-radius: 10px;
@@ -27,7 +27,29 @@
     }
    }
    .button{
-
+       padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        a{
+            text-decoration: none;
+            padding: 10px;
+            opacity: 0.79;
+            border-radius: 10px;
+            border: solid 4px #000;
+            background-color: #ed4561;
+            color: #000;
+            span{
+                font-family: Montserrat;
+                font-size: 20px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #000;
+            }
+        }
    }
 }
 

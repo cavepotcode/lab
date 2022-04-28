@@ -43,7 +43,7 @@ function App() {
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </div>
-          {/*<Footer />*/}
+          <Footer />
         </ToTop>
       </div>
     </div>

@@ -49,17 +49,6 @@ export const Footer = () => {
                         </>
                     ))}
                 </div>
-                <div className="column experiences">
-                    <label className='title'>{t("footer.column.2.title")}</label>
-                    {Object.keys(linksProjects).slice(0,4).map((it: string,key) => (
-                            <a href={"/project/"+linksProjects[it].img} target="_blank">
-                                    { linksProjects[it].title }
-                            </a> 
-                    ))}
-                    <NavLink to={t("links.experiences.link")}>
-                        {t("links.experiences.label")}
-                    </NavLink> 
-                </div>
                 <div className="column connect">
                     <label className='title'>{t("footer.column.3.title")}</label>
                     {linksRedes.map((obj: any,key) => (
