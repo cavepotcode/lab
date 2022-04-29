@@ -8,7 +8,7 @@
     grid-row: 3;
     gap: 34px;
     margin-bottom: $spaceBetween45;
-    height: 360px;
+    height: 330px;
 
     border-bottom: solid $BorderWidth $BorderBlack;;
     border-top: solid $BorderWidth $BorderBlack;;
@@ -35,7 +35,6 @@
         gap: 30px;
         margin-bottom: -50px;
         .card {
-            height: 340px;
             width: 275px;
             background-color: #ffffff;
             box-shadow: 0px 23px 35.7px 2.3px rgba($BorderBlack, 0.15);
@@ -115,7 +114,6 @@
             .card {
                 justify-content: space-around;
                 width: 382px;
-                height: 350px;
                 padding: 43px;
                 label {
                     width: 100%;
@@ -123,6 +121,9 @@
                 }
                 button {
                     width: 295px;
+                }
+                p {
+                    width: 100%;
                 }
             }
         }

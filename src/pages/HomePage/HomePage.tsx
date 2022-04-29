@@ -11,6 +11,15 @@ import { Link, scroller } from 'react-scroll';
 import './HomePage.scss';
 import { useEffect } from "react";
 import { Experiments } from "../../components/experiments/experiments";
+import { ICard } from "../../components/whatDoWeDo/WhatDoWeDo";
+
+const cards: Array<ICard> = [
+  {title: "", text: "Breaking rules is often the only way to explore new ideas! If you stick to them all the time, how will you get to know your authentic potencial?", buttonLink: "", buttonText: "Learn More"},
+  {title: "", text: "This is a free, no-judgement and safe zone. You don’t have to br a genius to get involved! Our differences are what makes us so unique!", buttonLink: "", buttonText: "Wanna join?"},
+  {title: "", text: "We are curious about many things. That’s why, whenever a new technology comes out we bring it to our lab so we can explore it.", buttonLink: "", buttonText: "Whats new?"},
+  {title: "", text: "Here is where we cook some of our greatest ideas! All ingredients are important (specially the ones you bring!)", buttonLink: "", buttonText: "Share your ideas"}
+]
+
 export function HomePage() {
   let params = useParams();
 
@@ -40,9 +49,12 @@ export function HomePage() {
     <div className="home-page">
       <Welcome />
       <Experiments />
+      <WhatDoWeDo 
+        title="What do we here?" 
+        subTitle="You know what they say about learning the rules before breaking them? Exactly." 
+        cards={cards}/>
       {/*
       <WhatIsCavepot />
-      <WhatDoWeDo />
       <HowWeDoIt />
       <TechnologiesThatWeUse />
       <ClientSay />
