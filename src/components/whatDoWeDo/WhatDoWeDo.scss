@@ -105,7 +105,7 @@
     .what-do-we-do {
         border-bottom: unset;
         border-top: unset;
-        height: 1227px;
+        height: 1050px;
         background-color: $White;
         .title {
             :nth-child(2) {
@@ -146,7 +146,7 @@
     .what-do-we-do {
 
         .cards-wrapper {
-            margin-top: 190px;
+            margin-top: 20px;
             flex-direction: row;
             align-items: center;
             background-color: $AmarilloBanner;
@@ -157,7 +157,7 @@
                 max-width: 382px;
                 width: 100%;
                 margin:  0 $paddingCajasSM;
-                height: 350px;
+                height: 150px;
                 label {
                     width: 295px;
                     font-size: 1.5rem;
