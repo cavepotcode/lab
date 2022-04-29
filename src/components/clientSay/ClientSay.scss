@@ -4,7 +4,7 @@
 .client-say {
     display: flex;
     flex-direction: row;
-    background-color: #ffd93b;
+    background-color: $AmarilloBanner;
     justify-content: center;
     align-items: center;
     gap: $spaceBetween20;
@@ -39,7 +39,7 @@
             border-bottom: solid $BorderWidth $BorderBlack;
             border-top: solid $BorderWidth $BorderBlack;
             flex-direction: row;
-            background-color: #ffd93b;
+            background-color: $AmarilloBanner; 
             padding: 40px 25px 0 25px;
             height: 265px;
             width: 100%;
