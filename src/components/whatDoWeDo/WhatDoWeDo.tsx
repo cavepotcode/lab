@@ -48,11 +48,9 @@ export const WhatDoWeDo: React.FC<IWhatDoWeDoProps> = ({title, subTitle, cards, 
           */}
           {/*<label><Trans>{card.title}</Trans></label>*/}
           <p><Trans>{card.text}</Trans></p>
-          <NavLink to={card.buttonLink}>
-              <button>
-                  {card.buttonText}
-              </button>
-          </NavLink>
+          <a href={card.buttonLink} target="_blank">
+            {card.buttonText}
+          </a>
         </div>
     )
   }

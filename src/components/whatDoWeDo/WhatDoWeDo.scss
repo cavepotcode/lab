@@ -58,11 +58,23 @@
                 transform: scale(1.02);
                 box-shadow: 0px 23px 35.7px 2.3px rgba($BorderBlack, 0.30);
             }
-            button {
+            a {
+                width: 216px;
+                font-size: .875rem;
+                font-family: Montserrat-ExtraBold;
+                line-height: normal;
+                font-weight: 700;
+                color: #2d2829;
+                text-decoration: none;
+                cursor: pointer;
+                border-radius: 4px;
+                color: #fff;
+                border: 2px solid #181718;
+                padding: 10px;
                 margin-top: 5px;
                 background-color: $CeriseRed;
             }
-            button:hover{
+            a:hover{
                 background-color: darken($CeriseRed,$darkerPorcentaje);
             }
             label {
@@ -119,8 +131,8 @@
                     width: 100%;
                     font-size: 1.5rem;
                 }
-                button {
-                    width: 295px;
+                a {
+                    width:100%;
                 }
                 p {
                     width: 100%;
@@ -150,8 +162,8 @@
                     width: 295px;
                     font-size: 1.5rem;
                 }
-                button {
-                    width: 295px;
+                a {
+                    width: 100%;
                     margin:  10px $paddingCajasSM;;
 
                 }
