@@ -8,11 +8,11 @@
     flex-direction: column;
     
     .slide {
+        min-height: 120px;
         border: solid  $BorderWidth $BorderBlack;
         display: flex;
         flex-direction: column;
         width: 740px;
-        height: 170px;
         position: absolute;
         align-self: center;
         opacity: 0;
@@ -32,7 +32,14 @@
             justify-content: flex-end;
         }
         .text-say,.firm{
-            
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: italic;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #2d2829;
         } 
     }
     
@@ -49,12 +56,14 @@
         cursor: pointer;
     }
     .prev {
-        top: 30%;
-        left: 20px;
+        cursor: pointer;
+        top: 25%;
+        left: -5px;
         //transform: translateY(-60%);
     }
     .next {
-        top: 30%;
+        cursor: pointer;
+        top: 25%;
         right: 20px;
         //transform: translateY(-60%);
     }
@@ -86,7 +95,7 @@
     .container-slider{
         width: 100%;
         .slide{
-            width: 100%;
+            width: auto;;
             height: auto;
             max-height: 299px;
         }
@@ -103,6 +112,7 @@
     .container-slider{
         height: 220%;
         .slide{
+            width: auto;;
             height: auto;
             max-height: 370px;
         }

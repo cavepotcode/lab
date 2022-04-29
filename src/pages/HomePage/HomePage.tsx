@@ -3,7 +3,6 @@ import { ClientSay } from "../../components/clientSay/ClientSay";
 import { HowWeDoIt } from "../../components/howWeDoIt/HowWeDoIt";
 import { Investigation } from "../../components/investigation/Investigation";
 import { Welcome } from "../../components/welcome/welcome";
-import { TechnologiesThatWeUse } from "../../components/technologiesThatWeUse/TechnologiesThatWeUse";
 import { WhatDoWeDo } from "../../components/whatDoWeDo/WhatDoWeDo";
 import WhatIsCavepot from "../../components/whatIsCavepot/WhatIsCavepot";
 import { Link, scroller } from 'react-scroll';
@@ -51,14 +50,12 @@ export function HomePage() {
       <Experiments />
       <WhatDoWeDo 
         title="What do we do here?" 
-        subTitle="You know what they say about learning the rules before breaking them? Exactly." 
+        subTitle="You know
+         what they say about learning the rules before breaking them? Exactly." 
         cards={cards}/>
-      {/*
-      <WhatIsCavepot />
-      <HowWeDoIt />
-      <TechnologiesThatWeUse />
       <ClientSay />
-      <Investigation />
+      {/*
+      
       */}
     </div>
   );

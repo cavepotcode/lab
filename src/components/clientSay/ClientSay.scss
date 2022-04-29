@@ -4,7 +4,7 @@
 .client-say {
     display: flex;
     flex-direction: row;
-    background-color: $aqua;
+    background-color: #ffd93b;
     justify-content: center;
     align-items: center;
     gap: $spaceBetween20;
@@ -14,6 +14,7 @@
     border-bottom: solid $BorderWidth $BorderBlack;
     border-top: solid $BorderWidth $BorderBlack;
     .label-wrapper {
+        width: 180px;
         display: flex;
         label {
             @include textBasisBold($title);
@@ -38,7 +39,7 @@
             border-bottom: solid $BorderWidth $BorderBlack;
             border-top: solid $BorderWidth $BorderBlack;
             flex-direction: row;
-            background-color: $aqua;
+            background-color: #ffd93b;
             padding: 40px 25px 0 25px;
             height: 225px;
             width: 100%;
