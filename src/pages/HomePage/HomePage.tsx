@@ -9,6 +9,7 @@ import './HomePage.scss';
 import { useEffect } from "react";
 import { Experiments } from "../../components/experiments/experiments";
 import { ICard } from "../../components/whatDoWeDo/WhatDoWeDo";
+import { Digging } from "../../components/digging/digging";
 
 const cards: Array<ICard> = [
   {title: "", text: "Breaking rules is often the only way to explore new ideas! If you stick to them all the time, how will you get to know your authentic potencial?", buttonLink: "https://cavepot.com", buttonText: "Learn More"},
@@ -26,7 +27,7 @@ export function HomePage() {
 
   useEffect(() => {
     if (params.menu) {
-        scrollToSection(params.menu)
+      //scrollToSection(params.menu)
     }
     // code to run after render goes here
   }, []); // <-- empty array means 'run once'
@@ -51,6 +52,7 @@ export function HomePage() {
         subTitle="You know
          what they say about learning the rules before breaking them? Exactly." 
         cards={cards}/>
+      <Digging/>
       <ClientSay />
       <Explore/>
       {/*

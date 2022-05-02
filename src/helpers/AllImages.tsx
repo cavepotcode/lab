@@ -21,6 +21,7 @@ export const Welcome = require('../assets/img/welcome.png').default;
 export const Laboratory = require('../assets/img/laboratory.png').default;
 export const exploreLeft = require('../assets/img/exploreLeft.png').default;
 export const exploreRight = require('../assets/img/exploreRight.png').default;
+export const woman = require('../assets/img/woman.png').default;
 
 //IMG GENERALES
 export const AboutUsRed = require('../assets/img/red.png').default;
