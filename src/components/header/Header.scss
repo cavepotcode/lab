@@ -148,10 +148,10 @@ $logoHeight: 35px;
             background-image: url(../../assets/img/logo/l.png);
         }
         #lab_a {
-            left: calc((42 / 52)  *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + 3.6px);
+            left: calc(3 * (27 / 52) *#{$logoHeight} + 3.6px);
         }
         #lab_b {
-            left: calc((42 / 52) * 2 *#{$logoHeight} + 2 * (27 / 52) *#{$logoHeight} + 3.6px);
+            left: calc(1 * (42 / 52)  *#{$logoHeight} + 3 * (27 / 52) *#{$logoHeight} + 3.6px);
         }
         .we-love-to-explore {
             transition: all ease 1s;

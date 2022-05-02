@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
-import { Trans, useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
-import { AllImages } from '../../helpers';
+import { v4 as uuidv4 } from "uuid";
 
 import './WhatDoWeDo.scss';
 
@@ -41,13 +39,8 @@ export const WhatDoWeDo: React.FC<IWhatDoWeDoProps> = ({title, subTitle, cards, 
 
   const renderCard = (card: ICard) =>{
     return (
-        <div className='card'>
-          {/*<div className='img-wrapper'>
-            <img src={AllImages.StaffAugmentation} />
-          </div>
-          */}
-          {/*<label><Trans>{card.title}</Trans></label>*/}
-          <p><Trans>{card.text}</Trans></p>
+        <div key={uuidv4()} className='card'>
+          <p>{card.text}</p>
           <a href={card.buttonLink} target="_blank">
             {card.buttonText}
           </a>

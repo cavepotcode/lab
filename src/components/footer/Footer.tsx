@@ -6,9 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTwitter,faInstagram,faLinkedin,faGithub } from '@fortawesome/free-brands-svg-icons'
 
-
 import './Footer.scss';
-import { useHref } from 'react-router-dom';
 
 library.add(faFacebook);
 library.add(faTwitter);
@@ -21,7 +19,6 @@ export const Footer = () => {
     const [t] = useTranslation("global");
 
     const linksHeader = Object.values(t('links.header', { returnObjects: true }));
-    const linksProjects = Object.values(t('projects.projects', { returnObjects: true }));
     const linksRedes = Object.values(t('links.redes', { returnObjects: true }))
     return (
         <div className="footer">
@@ -35,7 +32,7 @@ export const Footer = () => {
                     {linksHeader.map((obj: any,key) => (
                         <>   
                             {obj.link.includes("http") && 
-                                <a href={obj.link} target='_blank' className='menu-nav__link'>
+                                <a key={key} href={obj.link} target='_blank' className='menu-nav__link'>
                                     { obj.label }
                                 </a>
                             } 
@@ -65,7 +62,7 @@ export const Footer = () => {
                     </div>
                     <div className='social-media'>
                         {linksRedes.map((obj: any,key) => (
-                                <a href={obj.link} target="_blank">
+                                <a key={key} href={obj.link} target="_blank">
                                         <FontAwesomeIcon icon={['fab', obj.label.toLowerCase()]} />
                                 </a> 
                         ))}

@@ -54,16 +54,20 @@
         border: none;
         position: absolute;
         cursor: pointer;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
     }
     .prev {
         cursor: pointer;
-        top: 25%;
-        left: -5px;
+        top: 30%;
+        left: 20px;
         //transform: translateY(-60%);
     }
     .next {
         cursor: pointer;
-        top: 25%;
+        top: 30%;
         right: 20px;
         //transform: translateY(-60%);
     }

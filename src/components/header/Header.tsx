@@ -83,7 +83,7 @@ export const Header = () => {
             {
                     links.map((obj: any, key) => (
                         //className="menu-nav__link-contact"
-                        <li className="menu-nav__item">
+                        <li key={obj.label} className="menu-nav__item">
                            {obj.link.includes("http") &&
                                 <a href={obj.link} target='_blank' className={obj.link.includes("contact") ? "menu-nav__link-contact" : "menu-nav__link"}>
                                     {obj.label}
