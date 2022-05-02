@@ -1,0 +1,39 @@
+@import "../../styles/main";
+@import "../../styles/variables";
+@import "../../styles/mixin";
+
+.explore {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 50px;
+    margin-bottom: $spaceBetween;
+    img{
+        width: 15rem;
+    }
+    a{
+        text-decoration: none;
+        padding: 15px 20px;
+        border-radius: 10px;
+        border: solid 4px #000;
+        background-color: #ffd93b;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000;
+    }
+}
+
+@include media-lg {
+    .explore {
+        img{
+            display: none;
+        }
+    }
+}

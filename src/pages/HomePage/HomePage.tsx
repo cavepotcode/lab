@@ -1,11 +1,9 @@
 import { useParams } from "react-router-dom";
 import { ClientSay } from "../../components/clientSay/ClientSay";
-import { HowWeDoIt } from "../../components/howWeDoIt/HowWeDoIt";
-import { Investigation } from "../../components/investigation/Investigation";
 import { Welcome } from "../../components/welcome/welcome";
 import { WhatDoWeDo } from "../../components/whatDoWeDo/WhatDoWeDo";
-import WhatIsCavepot from "../../components/whatIsCavepot/WhatIsCavepot";
-import { Link, scroller } from 'react-scroll';
+import { Explore } from "../../components/explore/explore";
+import { scroller } from 'react-scroll';
 
 import './HomePage.scss';
 import { useEffect } from "react";
@@ -54,6 +52,7 @@ export function HomePage() {
          what they say about learning the rules before breaking them? Exactly." 
         cards={cards}/>
       <ClientSay />
+      <Explore/>
       {/*
       
       */}
