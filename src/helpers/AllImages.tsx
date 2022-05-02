@@ -27,3 +27,6 @@ export const woman = require('../assets/img/woman.png').default;
 export const AboutUsRed = require('../assets/img/red.png').default;
 export const AboutUsYellow = require('../assets/img/yellow.png').default;
 export const AboutUsPurple = require('../assets/img/purple.png').default;
+export const create = require('../assets/img/create.png').default;
+export const learn = require('../assets/img/learn.png').default;
+export const disrupt = require('../assets/img/disrupt.png').default;

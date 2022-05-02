@@ -3,106 +3,120 @@
 @import "../../styles/mixin";
 
 .experiments {
-   .cards{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    .card{
-        width: 25%;
-        margin: 20px auto;
-        padding: 20px;
-        border-radius: 10px;
-        border: solid 4px #000;
-        background-color: #fff;
-        min-width: 200px;
-        display: flex;
-        flex-direction: column;
-        .title{
-            display: flex;
-            justify-content: center;
-            font-weight: bold;
-            padding-bottom: 10px;
-        }
+    .title{
+        padding-top: 20px;
+        background-color: $aqua;
+        text-align: center;
+        font-size: 1.65rem;
+        font-family: Montserrat-ExtraBold;
+        line-height: normal;
+        font-weight: 700;
+        color: #2d2829;
     }
-   }
-   .button{
-        padding: 50px 0;
+   .cards{
+        padding: 20px 200px 0px 200px;
         display: flex;
-        justify-content: center;
-        a{
-            text-decoration: none;
-            padding: 10px;
-            opacity: 0.79;
-            border-radius: 10px;
-            border: solid 4px #000;
-            background-color: #ed4561;
-            color: #000;
-            span{
-                font-family: Montserrat;
-                font-size: 20px;
-                font-weight: bold;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
-                letter-spacing: normal;
-                text-align: center;
-                color: #000;
-                display: flex;
-                justify-content: center;
-                .logo{
-                    padding-right: 5px;
-                }
-            }
-        }
-   }
-   .laboratory{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        .img {
-            max-width: 60rem;
-            min-width: 60rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img{
-                animation: showLeft 0.8s linear forwards;
-                justify-content: flex-start;
-                width: 100%;
-            }        
-        }
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: $aqua;
+        padding-bottom: 20px;
         .card{
-            max-width: 20rem;
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 6.3px 22.1px 35.7px 2.3px rgba(57, 58, 57, 0.15);
-            border: solid 4px #000;
-            background-color: $AmarilloBanner;
+            width: 25%;
+            margin: 0 20px ;
+            min-width: 200px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 20px;
-            span{
-                font-family: Montserrat;
-                font-size: 15x;
-                font-weight: normal;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
-                letter-spacing: normal;
-                text-align: center;
-                color: #2d2829;
+            align-items: center;
+            img{
+                width: 120px;
+                padding-bottom: 20px;
+            }
+            .title{
+                font-size: 20px;
+                font-weight: bold;
             }
         }
+    }
+    .button{
+            padding: 50px 0;
+            display: flex;
+            justify-content: center;
+            a{
+                text-decoration: none;
+                padding: 10px;
+                opacity: 0.79;
+                border-radius: 10px;
+                border: solid 4px #000;
+                background-color: #ed4561;
+                color: #000;
+                span{
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: #000;
+                    display: flex;
+                    justify-content: center;
+                    .logo{
+                        padding-right: 5px;
+                    }
+                }
+            }
+    }
+    .laboratory{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            .img {
+                max-width: 60rem;
+                min-width: 60rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    animation: showLeft 0.8s linear forwards;
+                    justify-content: flex-start;
+                    width: 100%;
+                }        
+            }
+            .card{
+                max-width: 20rem;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: 6.3px 22.1px 35.7px 2.3px rgba(57, 58, 57, 0.15);
+                border: solid 4px #000;
+                background-color: $AmarilloBanner;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                span{
+                    font-family: Montserrat;
+                    font-size: 15x;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: #2d2829;
+                }
+            }
     }
 }
 
 @include media-lg {
     .experiments {
         .cards{
+            padding: 0 0 20px 0;
             .card{
-                width: 80%;
+                width: 100%;
             }
         }
         .button{

@@ -12,18 +12,24 @@ export const Experiments = () => {
 
     return (
       <div className="experiments">
+        <div className='title'>
+          What are  we seeking?
+        </div>
         <div className="cards">
           <div className='card'>
-            <div className='title'>Learn to create</div>
-            <div className='subTitle'>gdfgdsa to disrupt ss dffg drhdh </div>
+            <img src={AllImages.learn} alt='learn'/>
+            <div className='title'>Learn </div>
+            <div className='subTitle'>to create</div>
           </div>
           <div className='card'>
-            <div className='title'>Create to disrupt</div>
-            <div className='subTitle'>hgfdhfdgs to disrupt ss dffg drhdh </div>
+            <img src={AllImages.create} alt='create'/>
+            <div className='title'>Create </div>
+            <div className='subTitle'>to disrupt </div>
           </div>
           <div className='card'>
-            <div className='title'>Disrupt to discover</div>
-            <div className='subTitle'>gfdhfdhd fshfdshf dshdfsh to disrupt ss dffg drhdh </div>
+            <img src={AllImages.disrupt} alt='disrupt'/>
+            <div className='title'>Disrupt </div>
+            <div className='subTitle'>to discover </div>
           </div>
         </div>
         <div className="button">
