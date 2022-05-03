@@ -1,18 +1,18 @@
-import { AllImages } from '../../helpers';
+import { IExplore } from '../../helpers';
 import './explore.scss';
 
-export const Explore = () => {
+export const Explore: React.FC<IExplore>= ({title, left, link, right}) => {
 
     return (
       <div className="explore">
         <div className="img">
-          <img src={AllImages.exploreLeft} alt="Left" />
+          <img src={left.src} alt={left.alt} />
         </div>
         <div>
-          <a href='http://cavepot.com/contact' target="_blank">let´s explore  together</a>
+          <a href={link} target="_blank">{title}</a>
         </div>
         <div className="img">
-            <img src={AllImages.exploreRight} alt="Right" />
+            <img src={right.src} alt={right.alt} />
         </div>
       </div>
     )

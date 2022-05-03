@@ -1,23 +1,9 @@
 import { useEffect } from 'react';
 import { v4 as uuidv4 } from "uuid";
-
+import { IWhat, ICard } from '../../helpers';
 import './WhatDoWeDo.scss';
 
-export interface ICard {
-  title: string,
-  text: string,
-  buttonLink: string,
-  buttonText: string
-}
-
-export interface IWhatDoWeDoProps {
-  title: string,
-  subTitle: string
-  cards: Array<ICard>,
-  delay?: number;
-}
-
-export const WhatDoWeDo: React.FC<IWhatDoWeDoProps> = ({title, subTitle, cards, delay = 0 , ...props}) => {
+export const WhatDoWeDo: React.FC<IWhat> = ({title, subTitle, cards, delay = 0 , ...props}) => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach((entry: any) => {
       if (entry.isIntersecting) {

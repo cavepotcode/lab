@@ -39,11 +39,11 @@ export function HomePage() {
   return (
     <div className="home-page">
       <Welcome title={Text.welcome.title} subTitle={Text.welcome.subTitle} img={Text.welcome.img}/>
-      <Experiments title={Text.experiment.title} cards={Text.experiment.cards} />
+      <Experiments title={Text.experiment.title} cards={Text.experiment.cards} /> {/* TODO: Need to improve */}
       <WhatDoWeDo title={Text.what.title} subTitle={Text.what.subTitle} cards={Text.what.cards}/>
-      <Digging/>
-      <ClientSay />
-      <Explore/>
+      <Digging title={Text.digging.title} text={Text.digging.text} img={Text.digging.img}/> 
+      <ClientSay /> {/* TODO: Improve the client say and the slider */}
+      <Explore title={Text.explore.title} link={Text.explore.link} right={Text.explore.right} left={Text.explore.right}/>
       {/*
       
       */}

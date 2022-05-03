@@ -1,5 +1,11 @@
 import { AllImages } from '../helpers';
-import { ICard } from "../components/whatDoWeDo/WhatDoWeDo";
+
+export interface ICard {
+  title: string,
+  text: string,
+  buttonLink: string,
+  buttonText: string
+}
 
 export interface IImg {
   src: string;
@@ -15,7 +21,8 @@ export interface IExperimentCard {
 export interface IWhat {
   title: string;
   subTitle: string;
-  cards: Array<ICard>
+  cards: Array<ICard>;
+  delay?: number;
 }
 
 export interface IWelcome {
@@ -24,15 +31,30 @@ export interface IWelcome {
   img: string;
 }
 
+export interface IExplore {
+  left: IImg;
+  right: IImg;
+  title: string;
+  link: string;
+}
+
 export interface IExperiment {
   title: string;
   cards : Array<IExperimentCard>
+}
+
+export interface IDigging {
+  img: IImg;
+  title: string;
+  text: string;
 }
 
 interface IText {
   what: IWhat; 
   welcome: IWelcome;
   experiment: IExperiment;
+  explore: IExplore;
+  digging: IDigging;
 }
 
 export const Text: IText = {
@@ -58,5 +80,19 @@ export const Text: IText = {
       {title: 'Create', subTitle: 'to disrupt', img: {src: AllImages.create, alt: 'create'}},
       {title: 'Disrupt', subTitle: 'to discover', img: {src: AllImages.disrupt, alt: 'disrupt'}}
     ]
+  },
+  explore: {
+    left: {src: AllImages.exploreLeft, alt: 'left img'},
+    right: {src: AllImages.exploreRight, alt: 'right img'},
+    title: 'let´s explore  together',
+    link: 'http://cavepot.com/contact'
+  },
+  digging: {
+    img: {src: AllImages.woman, alt: 'Woman img'},
+    title: 'Digging outside the cave',
+    text: `We <strong>love learning</strong> about the how to and why of things, this is why whenever a <strong>new technology</strong> comes out of a new technology is introduced to 
+      us we bring it to the lab to explore and analyze it. Sometimes it's not necessarily a new 
+      technology or a combination, sometimes it's the other way around, we come across a problem that 
+      we are not sure about how to solve and here we can test, and <strong>discover the best possible solution.</strong>`
   }
 }
