@@ -2,35 +2,28 @@ import { Trans, useTranslation } from 'react-i18next';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { AllImages } from '../../helpers';
+import { AllImages , IExperiment} from '../../helpers';
 import './experiments.scss';
 
 library.add(faGithub);
 
-export const Experiments = () => {
+export const Experiments: React.FC<IExperiment> = ({title, cards} ) => {
     const [t] = useTranslation("global");
 
     return (
       <div className="experiments">
         <div className='title'>
-          What are  we seeking?
+          {title}
         </div>
         <div className="cards">
-          <div className='card'>
-            <img src={AllImages.learn} alt='learn'/>
-            <div className='title'>Learn </div>
-            <div className='subTitle'>to create</div>
-          </div>
-          <div className='card'>
-            <img src={AllImages.create} alt='create'/>
-            <div className='title'>Create </div>
-            <div className='subTitle'>to disrupt </div>
-          </div>
-          <div className='card'>
-            <img src={AllImages.disrupt} alt='disrupt'/>
-            <div className='title'>Disrupt </div>
-            <div className='subTitle'>to discover </div>
-          </div>
+          {cards.map((card) => {
+            return (
+              <div key={card.title} className='card'>
+                <img src={card.img.src} alt={card.img.alt}/>
+                <div className='title'>{card.title}</div>
+                <div className='subTitle'>{card.subTitle}</div>
+              </div>)
+          })}
         </div>
         <div className="button">
           <a href='https://github.com/cavepotcode/' target='_blank'>

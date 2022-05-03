@@ -1,18 +1,16 @@
-import { Trans, useTranslation } from 'react-i18next';
-import { AllImages } from '../../helpers';
+import { IWelcome } from '../../helpers';
 import './welcome.scss';
 
-export const Welcome = () => {
-    const [t] = useTranslation("global");
+export const Welcome: React.FC<IWelcome> = ({title, subTitle, img}) => {
 
     return (
         <div className="welcome">
             <div className="textwrapper">
-                <label className="title">{t("welcome.title")}</label>
-                <label className="subtitle"><Trans>{t("welcome.subtitle")}</Trans></label>
+                <label className="title">{title}</label>
+                <label className="subtitle">{subTitle}</label>
             </div>
             <div className="img">
-                <img src={AllImages.Welcome} alt={t("welcome.alt.img.1")} />
+                <img src={img} alt={img} />
             </div>
         </div>
     )
