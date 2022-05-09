@@ -53,11 +53,11 @@
             },
             "company": {
                 "label": "Our Company",
-                "link": "https://cavepotcode.github.io/web/"
+                "link": "https://cavepot.com"
             },
             "contact-us": {
                 "label": "Contact us",
-                "link": "https://cavepotcode.github.io/web/#/contact-us"
+                "link": "https://cavepot.com/contact"
             }
         },
         "redes": {
