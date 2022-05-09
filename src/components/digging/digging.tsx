@@ -10,7 +10,7 @@ export const Digging: React.FC<IDigging> = ({title, text, img}) => {
             <img src={img.src} alt={img.alt} />
           </div>
           <div className='title'>{title}</div>
-          <div className='text'>{text}</div>
+          <div className='text' dangerouslySetInnerHTML={{__html: text}}></div>
         </div>
       </div>
     )
