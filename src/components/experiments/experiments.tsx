@@ -39,8 +39,8 @@ export const Experiments: React.FC<IExperiment> = ({title, cards} ) => {
           </div>
           <div className="card">
             <span>
-              Other than working on projects that challenge us, <strong>we challenge ourselves</strong> by learning and creating. This is a space where we (and you!).  
-              Experiment with the <strong>latest technologies </strong> and, of course, why <strong>not create new ones</strong>?
+              Other than working on projects that challenge us, <strong>we challenge ourselves</strong> by learning and creating. This is a space where we (and you!) 
+              experiment with the <strong>latest technologies </strong> and, of course, why <strong>not create new ones</strong>?
             </span>
             <span>
               Not only do we work in the lab for our company, but also, 

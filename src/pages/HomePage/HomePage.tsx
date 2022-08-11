@@ -43,7 +43,7 @@ export function HomePage() {
       <WhatDoWeDo title={Text.what.title} subTitle={Text.what.subTitle} cards={Text.what.cards}/>
       <Digging title={Text.digging.title} text={Text.digging.text} img={Text.digging.img}/> 
       <ClientSay /> {/* TODO: Improve the client say and the slider */}
-      <Explore title={Text.explore.title} link={Text.explore.link} right={Text.explore.right} left={Text.explore.right}/>
+      <Explore title={Text.explore.title} link={Text.explore.link} right={Text.explore.right} left={Text.explore.left}/>
     </div>
   );
 }
