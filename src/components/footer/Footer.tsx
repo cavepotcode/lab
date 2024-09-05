@@ -1,5 +1,4 @@
-import { useTranslation } from 'react-i18next';
-import { AllImages } from '../../helpers';
+import { AllImages, Data } from '../../helpers';
 import { NavLink } from 'react-router-dom';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -16,23 +15,26 @@ library.add(faGithub);
 
 
 export const Footer = () => {
-    const [t] = useTranslation("global");
+    const headerLinks = Data.links.header;
+    const redesLinks = Data.links.redes;
+    const footer = Data.footer;
 
-    const linksHeader = Object.values(t('links.header', { returnObjects: true }));
-    const linksRedes = Object.values(t('links.redes', { returnObjects: true }))
+    const linksHeader = Object.values(headerLinks.links);
+    const linksRedes = Object.values(redesLinks.links);
+   
     return (
         <div className="footer">
             <div className="img-wrapper">
             <a href="https://www.cavepotlab.com/" target="_blank">
-                <img src={AllImages.CavepotLabLogo} alt={t("footer.alt.img.2")} />
+                <img src={AllImages.CavepotLabLogo} alt={footer.alt.imgs[1]} />
             </a>
             <a href="https://cavepot.com" target="_blank">
-                <img src={AllImages.LogoFooter} alt={t("footer.alt.img.1")} />
+                <img src={AllImages.LogoFooter} alt={footer.alt.imgs[0]} />
             </a>
             </div>
             <div className="text-wrapper">
                 <div className="column company">
-                    <label className='title'>{t("footer.column.1.title")}</label>
+                    <label className='title'>{footer.columns[0].title}</label>
                     {linksHeader.map((obj: any,key) => (
                         <>   
                             {obj.link.includes("http") && 
@@ -49,7 +51,7 @@ export const Footer = () => {
                     ))}
                 </div>
                 <div className="column connect">
-                    <label className='title'>{t("footer.column.3.title")}</label>
+                    <label className='title'>{footer.columns[1].title}</label>
                     {linksRedes.map((obj: any,key) => (
                             <a href={obj.link} target="_blank">
                                     { obj.label }
@@ -59,10 +61,10 @@ export const Footer = () => {
                 </div>
                 <div className="column locate">
                     <div className='main-text'>
-                        <label className='title' >{t("footer.column.4.title")}</label>
-                        <a href='https://goo.gl/maps/wz4pabw7Pg1Q5bog8' target="_blank">{t("footer.column.4.text.1")} {t("footer.column.4.text.2")}</a>
+                        <label className='title' >{footer.columns[2].title}</label>
+                        <a href='https://goo.gl/maps/wz4pabw7Pg1Q5bog8' target="_blank">{footer.columns[2].texts[0]} {footer.columns[2].texts[1]}</a>
                 
-                        <a href='mailto:info@cavepot.com' target="_blank">{t("footer.column.4.text.3")}</a>
+                        <a href='mailto:info@cavepot.com' target="_blank">{footer.columns[2].texts[2]}</a>
                     </div>
                     <div className='social-media'>
                         {linksRedes.map((obj: any,key) => (

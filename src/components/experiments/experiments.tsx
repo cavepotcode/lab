@@ -1,14 +1,13 @@
-import { Trans, useTranslation } from 'react-i18next';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { AllImages , IExperiment} from '../../helpers';
+import { AllImages , IExperiment, Text} from '../../helpers';
 import './experiments.scss';
 
 library.add(faGithub);
 
 export const Experiments: React.FC<IExperiment> = ({title, cards} ) => {
-    const [t] = useTranslation("global");
+    const welcome = Text.welcome;
 
     return (
       <div className="experiments">
@@ -35,7 +34,7 @@ export const Experiments: React.FC<IExperiment> = ({title, cards} ) => {
         </div>
         <div className="laboratory">
           <div className="img">
-              <img src={AllImages.Laboratory} alt={t("welcome.alt.img.1")} />
+              <img src={AllImages.Laboratory} alt={welcome.img} />
           </div>
           <div className="card">
             <span>
