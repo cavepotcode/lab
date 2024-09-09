@@ -1,17 +1,16 @@
-import { useTranslation } from "react-i18next";
-import { AllImages } from "../../helpers";
+import { AllImages, Data } from "../../helpers";
 
 
 import "./NotFount.scss"
 
 export function NotFoundPage(){
-    const [t] = useTranslation("global");
+    const notFound = Data["not-found"];
     
     return(
         <div className="not-found">
-            <label>{t("not-found.title")}</label>
-            <label>{t("not-found.subtitle")}</label>
-            <img src={AllImages.Olla} alt={t("not-found.alt.img")} />
+            <label>{notFound.title}</label>
+            <label>{notFound.subtitle}</label>
+            <img src={AllImages.Olla} alt={notFound.img} />
         </div>
     );
 }
