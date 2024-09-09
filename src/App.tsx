@@ -1,10 +1,11 @@
 import './App.scss';
-import { Footer } from './components/footer/Footer';
 import { Header } from './components/header/Header';
 import { Route, Routes, useLocation, Navigate } from "react-router-dom"
 import { HomePage } from './pages/HomePage/HomePage';
 import { NotFoundPage } from './pages/NotFound/NotFound';
 import { useLayoutEffect } from 'react';
+import { Footer } from './components/generics/footer/Footer';
+import { footerLab } from './helpers/footer';
 const ToTop = ({ children }) => {
   const location = useLocation();
   useLayoutEffect(() => {
@@ -29,7 +30,7 @@ function App() {
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </div>
-          <Footer />
+          <Footer {...footerLab}/>
         </ToTop>
       </div>
     </div>
