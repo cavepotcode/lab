@@ -9,7 +9,7 @@ export const Explore: React.FC<IExplore>= ({title, left, link, right}) => {
           <img src={left.src} alt={left.alt} />
         </div>
         <div>
-          <a href={link} target="_blank">{title}</a>
+          <a href={link} target="_blank" rel="noopener noreferrer">{title}</a>
         </div>
         <div className="img">
             <img src={right.src} alt={right.alt} />

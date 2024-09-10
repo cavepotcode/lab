@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FC } from "react";
-import { IFooter } from "./data/IFooter";
+import { IFooter } from "../data/IFooter";
 import "./Footer.scss";
 import { NavLink } from "react-router-dom";
 
@@ -24,12 +24,12 @@ export const Footer: FC<IFooter> = ({ columns, imgs, redes }) => {
       <div className="max-container">
         <div className="img-wrapper">
           <div className="column">
-            <a href="https://www.cavepotlab.com/" target="_blank">
+            <a href="https://www.cavepotlab.com/" target="_blank" rel="noopener noreferrer">
               <img src={imgs.img1} alt={imgs[0]} />
             </a>
 
             {imgs.img2 && (
-              <a href="https://cavepot.com" target="_blank">
+              <a href="https://cavepot.com" target="_blank" rel="noopener noreferrer">
                 <img src={imgs.img2} alt={imgs[1]} />
               </a>
             )}
@@ -47,6 +47,7 @@ export const Footer: FC<IFooter> = ({ columns, imgs, redes }) => {
                         <a
                           href={text.link}
                           target="_blank"
+                          rel="noopener noreferrer"
                           className="menu-nav__link"
                         >
                           {text.label}
@@ -67,7 +68,7 @@ export const Footer: FC<IFooter> = ({ columns, imgs, redes }) => {
                       {Object.keys(redes.links).map((key) => {
                         const obj = redes.links[key];
                         return (
-                          <a key={key} href={obj.link} target="_blank">
+                          <a key={key} href={obj.link} target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon
                               icon={["fab", obj.label?.toLowerCase()]}
                             />

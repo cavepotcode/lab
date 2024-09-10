@@ -25,7 +25,7 @@ export const Experiments: React.FC<IExperiment> = ({title, cards} ) => {
           })}
         </div>
         <div className="button">
-          <a href='https://github.com/cavepotcode/' target='_blank'>
+          <a href='https://github.com/cavepotcode/' target='_blank' rel="noopener noreferrer">
             <span>
               <div className='logo'><FontAwesomeIcon icon={['fab', 'github']} /></div>
               Take a look at some of our experiments

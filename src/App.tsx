@@ -1,11 +1,12 @@
 import './App.scss';
-import { Header } from './components/header/Header';
-import { Route, Routes, useLocation, Navigate } from "react-router-dom"
+import { Header } from '../src/components/generics/header/Header';
+import { Route, Routes, useLocation } from "react-router-dom"
 import { HomePage } from './pages/HomePage/HomePage';
 import { NotFoundPage } from './pages/NotFound/NotFound';
 import { useLayoutEffect } from 'react';
 import { Footer } from './components/generics/footer/Footer';
-import { footerLab } from './helpers/footer';
+import { footerLab, headerLab } from './helpers';
+import { Logo } from './components/logo/Logo';
 const ToTop = ({ children }) => {
   const location = useLocation();
   useLayoutEffect(() => {
@@ -19,7 +20,7 @@ function App() {
     <div className="app">
       <div className="grid">
         <ToTop>
-          <Header />
+          <Header {...headerLab} logo={<Logo/>}/>
           <div id="container">
             <Routes>
               {/* <Route path="/" element={<Navigate replace to="/home" />} /> */}

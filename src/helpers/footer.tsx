@@ -1,4 +1,4 @@
-import { IFooter } from "../components/generics/footer/data/IFooter";
+import { IFooter } from "../components/generics/data/IFooter";
 import { AllImages } from ".";
 
 export const footerLab: IFooter = {
