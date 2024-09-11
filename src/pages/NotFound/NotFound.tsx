@@ -1,10 +1,9 @@
-import { AllImages, Data } from "../../helpers";
-
+import { AllImages, NotFound } from "../../helpers";
 
 import "./NotFount.scss"
 
 export function NotFoundPage(){
-    const notFound = Data["not-found"];
+    const notFound = NotFound["not-found"];
     
     return(
         <div className="not-found">

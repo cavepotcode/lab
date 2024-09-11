@@ -27,7 +27,7 @@ export const WhatDoWeDo: React.FC<IWhat> = ({title, subTitle, cards, delay = 0 ,
     return (
         <div key={uuidv4()} className='card'>
           <p>{card.text}</p>
-          <a href={card.buttonLink} target="_blank">
+          <a href={card.buttonLink} target="_blank" rel="noopener noreferrer">
             {card.buttonText}
           </a>
         </div>
