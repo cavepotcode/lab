@@ -22,4 +22,8 @@ export const headerLab: IHeader = {
       link: "https://cavepot.com/contact",
     },
   ],
+  backgroundColor: "white",
+  textColor: "black",
+  contactBtnColor: "#e5405d",
+  contactBtnColorText: "white"
 };

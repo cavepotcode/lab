@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { CSSProperties, useEffect, useState } from "react";
 import { FC } from "react";
 import { IHeader } from "../data/IHeader";
+import { HeaderItem } from "./HeaderItem";
 
 import "./Header.scss";
 
@@ -10,7 +10,20 @@ export interface Size {
   height: number;
 }
 
-export const Header: FC<IHeader> = ({ logo, links }) => {
+export const Header: FC<IHeader> = ({
+  logo,
+  links,
+  backgroundColor,
+  textColor,
+  contactBtnColor,
+  contactBtnColorText
+}) => {
+  const style: CSSProperties & { [key: string]: string } = {
+    "--header-background-color": backgroundColor,
+    "--header-text-color": textColor,
+    "--contact-btn-color": contactBtnColor || backgroundColor,
+    "--contact-btn-color-text": contactBtnColorText
+  };
   // The size of the window
   const [size, setSize] = useState<Size>({
     width: window.innerWidth,
@@ -60,6 +73,7 @@ export const Header: FC<IHeader> = ({ logo, links }) => {
     <div
       id="header"
       className={`header ${colapse ? "colapse" : ""} ${showMenu ? "open" : ""}`}
+      style={style}
     >
       {logo}
 
@@ -71,47 +85,12 @@ export const Header: FC<IHeader> = ({ logo, links }) => {
       <nav className={showMenu ? "nav open" : "nav"}>
         <ul className={showMenu ? "menu-nav open" : "menu-nav"}>
           {links.map((obj: any, key) => (
-            <li key={key} className="menu-nav__item">
-              {obj.link.includes("http") && (
-                <a
-                  href={obj.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={
-                    obj.link.includes("contact")
-                      ? "menu-nav__link-contact"
-                      : "menu-nav__link"
-                  }
-                >
-                  {obj.label}
-                </a>
-              )}
-              {!obj.link.includes("http") && size.width <= 1024 && (
-                <NavLink
-                  to={obj.link}
-                  className={
-                    obj.link.includes("contact")
-                      ? "menu-nav__link-contact"
-                      : "menu-nav__link"
-                  }
-                  onClick={onShowMenu}
-                >
-                  {obj.label}
-                </NavLink>
-              )}
-              {!obj.link.includes("http") && size.width > 1024 && (
-                <NavLink
-                  to={obj.link}
-                  className={
-                    obj.link.includes("contact")
-                      ? "menu-nav__link-contact"
-                      : "menu-nav__link"
-                  }
-                >
-                  {obj.label}
-                </NavLink>
-              )}
-            </li>
+            <HeaderItem
+              item={obj}
+              key={key}
+              onShowMenu={onShowMenu}
+              size={size}
+            />
           ))}
         </ul>
       </nav>

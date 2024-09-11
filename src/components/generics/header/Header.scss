@@ -11,14 +11,11 @@ $logoHeight: 35px;
   align-items: center;
   height: $spaceBetween;
   position: fixed;
-  background-color: white;
+  background-color: var(--header-background-color);
   opacity: 0.9;
   z-index: 1000;
   justify-content: space-between;
   width: 100%;
-  &.open {
-    opacity: 1;
-  }
 
   .menu-btn {
     align-self: center;
@@ -38,7 +35,7 @@ $logoHeight: 35px;
       width: 28px;
       height: 3px;
       border-radius: 10px;
-      background-color: #8156ea;
+      background-color: var(--header-text-color);
       @include transition-ease;
 
       &::before {
@@ -48,7 +45,7 @@ $logoHeight: 35px;
         width: 28px;
         height: 3px;
         border-radius: 10px;
-        background: #8156ea;
+        background: var(--header-text-color);
         @include transition-ease;
       }
 
@@ -58,7 +55,7 @@ $logoHeight: 35px;
         top: 8px;
         width: 28px;
         height: 3px;
-        background: #8156ea;
+        background: var(--header-text-color);
         border-radius: 10px;
         @include transition-ease;
       }
@@ -84,7 +81,7 @@ $logoHeight: 35px;
     opacity: 0.98;
     visibility: visible;
     &.open {
-      background-color: $White;
+      background-color: var(--header-background-color);
       visibility: hidden;
       .menu-nav {
         &__item {
@@ -94,9 +91,6 @@ $logoHeight: 35px;
           }
           display: inline;
           padding-right: 1.5rem;
-        }
-        &.open {
-          padding: 0 !important;
         }
       }
     }
@@ -130,12 +124,15 @@ $logoHeight: 35px;
         display: inline-block;
         text-transform: uppercase;
         padding: 32px 0;
-        font-weight: 300;
-        @include textBasis(0.719rem);
+        border-radius: 5px;
+        font-weight: 600;
+        @include textBasis($text);
         @include transition-ease;
-
-        &.active {
-          @include textBasisBold(0.719rem);
+        color: var(--header-text-color);
+        &.active,
+        &:hover {
+          @include textBasisBold($text);
+          color: var(--header-text-color);
         }
       }
 
@@ -143,16 +140,23 @@ $logoHeight: 35px;
         text-decoration: none;
         padding: 7px;
         border-radius: 5px;
-        background-color: $CeriseRed;
-        color: white;
+        background-color: var(--contact-btn-color);
+        color: var(--contact-btn-color-text);
         font-weight: bold;
-        border: $BorderWidth $BorderBlack solid;
+        border: $BorderWidth var(--header-text-color) solid;
       }
 
       &__link-contact:hover {
-        background-color: darken($CeriseRed, $darkerPorcentaje);
+        background-color: var(--contact-btn-color-text);
+        color: var(--contact-btn-color);
+        border: var(--contact-btn-color) solid;
       }
     }
+  }
+  &.colapse {
+    transition: background-color ease 0.3s;
+    background-color: var(--header-background-color);
+    color: var(--header-background-color);
   }
 
   @for $i from 1 through 7 {
@@ -161,7 +165,6 @@ $logoHeight: 35px;
     }
   }
 }
-
 
 // maximo 1024px
 @include media-lg {
@@ -180,7 +183,7 @@ $logoHeight: 35px;
         justify-content: center;
         height: 100vh;
         overflow: hidden;
-        background-color: rgb(224, 220, 220);
+        background-color: var(--header-background-color);
         list-style-type: none;
         padding-right: 1rem;
         transform: translateY(-100%);
