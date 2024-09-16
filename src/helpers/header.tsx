@@ -1,6 +1,5 @@
-import { IHeader } from "../components/generics/data/IHeader";
 
-export const headerLab: IHeader = {
+export const headerLab = {
   logo: {
     img: null,
   },
