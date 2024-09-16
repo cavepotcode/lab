@@ -1,7 +1,6 @@
-import { IFooter } from "../components/generics/data/IFooter";
 import { AllImages } from ".";
 
-export const footerLab: IFooter = {
+export const footerLab = {
   columns: [
     {
       title: "Company",

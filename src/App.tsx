@@ -1,12 +1,11 @@
 import './App.scss';
-import { Header } from '../src/components/generics/header/Header';
 import { Route, Routes, useLocation } from "react-router-dom"
 import { HomePage } from './pages/HomePage/HomePage';
 import { NotFoundPage } from './pages/NotFound/NotFound';
 import { useLayoutEffect } from 'react';
-import { Footer } from './components/generics/footer/Footer';
 import { footerLab, headerLab } from './helpers';
 import { Logo } from './components/logo/Logo';
+import { Footer, Header } from '@cavepotcode/ui-toolkit';
 const ToTop = ({ children }) => {
   const location = useLocation();
   useLayoutEffect(() => {
